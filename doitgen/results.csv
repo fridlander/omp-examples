@@ -1,0 +1,2 @@
+p1,p3,p5,p9,p14,p4,p6,p7,p8,p10,p11,p12,objective,elapsed_sec
+#pragma omp #P4,NA,NA,NA,NA,simd,NA,NA,NA,NA,NA,NA,1.7976931348623157e+308,372.2124922275543
