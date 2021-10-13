@@ -1,0 +1,101 @@
+p1,p3,p5,p9,p14,p4,p6,p7,p8,p10,p11,p12,objective,elapsed_sec
+#pragma omp #P4,NA,NA,NA,NA,simd,NA,NA,NA,NA,NA,NA,1.7976931348623157e+308,1226.4082324504852
+ ,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1.7976931348623157e+308,2456.534129858017
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, , ,NA,simd, ,num_threads(#P12), ,NA,NA,72,1.7976931348623157e+308,3684.4063782691956
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)",num_threads(#P12),collapse(2),dynamic,8,72,25.96394733,4626.787037611008
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)", , , ,NA,NA,NA,NA,NA,NA,NA,NA,1.7976931348623157e+308,5902.4060797691345
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7,"dist_schedule(static, #P11)",thread_limit(#P14),128, ,schedule(#P10), ,collapse(2),static,16,NA,1.7976931348623157e+308,7290.405220746994
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10), ,collapse(2),dynamic,NA,NA,58.533691,8360.412358760834
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)", ,"dist_schedule(static, #P11)",thread_limit(#P14),32,NA,NA,NA,NA,NA,4,NA,1.7976931348623157e+308,9590.404969215393
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12), ,NA,NA,16,59.65781566,10658.403222084045
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, , ,NA,simd, , , ,NA,NA,NA,1.7976931348623157e+308,11888.403891801834
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, , ,NA,simd, ,num_threads(#P12), ,NA,NA,32,1.7976931348623157e+308,13116.40554690361
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)", , ,thread_limit(#P14),256,NA,NA,NA,NA,NA,NA,NA,1.7976931348623157e+308,14342.579186439514
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)", ,"dist_schedule(static, #P11)", ,NA,NA,NA,NA,NA,NA,2,NA,1.7976931348623157e+308,15568.404945611954
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),static,NA,64,21.271138,16268.868628263474
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),dynamic,NA,32,167.75905566,18442.402623414993
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, , ,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),static,NA,72,1.7976931348623157e+308,19684.40600824356
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, , ,collapse(2),NA,NA,NA,20.82837833,20388.40161538124
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12),collapse(2),static,8,176,24.54425433,21156.401995897293
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", ,collapse(2),dynamic,2,NA,33.64913866,22052.40239071846
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10), ,collapse(2),static,NA,NA,20.71453466,22784.40186047554
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10), ,collapse(2),static,NA,NA,20.81596466,23476.53001475334
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12),collapse(2),NA,NA,72,23.66220766,24254.403625011444
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12),collapse(2),NA,NA,72,20.90645666,24982.53046965599
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10), , ,static,NA,NA,19.43089933,25712.402574777603
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10), , ,static,NA,NA,19.40260533,26448.402997255325
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12), ,static,NA,176,21.233603,27242.87114596367
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12), ,static,NA,72,22.424501,27932.615708589554
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12), ,static,NA,128,20.65620366,28614.403654813766
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12),collapse(2),static,NA,72,21.03192433,29286.403042554855
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),static,NA,72,20.959377,29964.40331864357
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),static,NA,128,21.663387,30644.40183877945
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),static,NA,176,22.073836,31349.6387655735
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, , , ,NA,NA,NA,19.47534333,32015.80806660652
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12),collapse(2),NA,NA,32,36.946513,32959.63780236244
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12), ,dynamic,NA,72,18.67142666,33711.638712882996
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,2,72,18.683008,34463.638750076294
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,8,72,18.07764466,35224.06683588028
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", , ,dynamic,4,NA,18.473989,35913.63831663132
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", , ,dynamic,1,NA,18.43234,36611.6377620697
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", , ,dynamic,8,NA,18.51333766,37271.76573705673
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", , ,dynamic,16,NA,18.44834666,38041.63817811012
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,2,32,31.75743733,38837.63841223717
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12), ,static,NA,32,32.360448,39627.63860321045
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, ,thread_limit(#P14),32,simd,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,16,72,1.7976931348623157e+308,40893.81205010414
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12), ,dynamic,NA,32,32.327785,41709.76525878906
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7,"dist_schedule(static, #P11)", ,NA,simd,schedule(#P10),num_threads(#P12), ,static,16,72,1.7976931348623157e+308,42975.640590429306
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", , ,static,16,NA,20.013747,43697.63844919205
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,16,16,61.04774833,44885.63704276085
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)", , ,static,16,NA,19.85890266,45652.148627996445
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,16,72,22.16126933,46470.14914417267
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12), ,static,NA,32,32.50282833,47283.63657474518
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)",num_threads(#P12),collapse(2),static,1,32,33.274517,48091.63897180557
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7,"dist_schedule(static, #P11)",thread_limit(#P14),128,simd, ,num_threads(#P12), ,NA,8,72,1.7976931348623157e+308,49317.6401951313
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),static,NA,32,37.51713633,50163.63713622093
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12),collapse(2),static,NA,32,37.12151666,51709.63848400116
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, , ,NA,simd, ,num_threads(#P12),collapse(2),NA,NA,128,1.7976931348623157e+308,52997.63989186287
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , , , ,NA,NA,NA,19.456145,53789.63754940033
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,16,32,32.58287433,54673.63766813278
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)",num_threads(#P12),collapse(2),dynamic,2,32,103.59259,56225.638348817825
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, ,thread_limit(#P14),128,simd, , , ,NA,NA,NA,1.7976931348623157e+308,57503.639166116714
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, , ,NA, , , , ,NA,NA,NA,1.7976931348623157e+308,58727.63964676857
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)", , ,thread_limit(#P14),128,NA,NA,NA,NA,NA,NA,NA,1.7976931348623157e+308,59979.6400372982
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12), ,dynamic,NA,32,32.253249,60863.637310028076
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12),collapse(2),dynamic,NA,72,103.02557766,62391.98099589348
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10), , ,dynamic,NA,NA,18.431844,63053.63704872131
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", ,collapse(2),dynamic,1,NA,56.32539666,64089.85155701637
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10), , ,dynamic,NA,NA,18.572337,64749.976638793945
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7,"dist_schedule(static, #P11)", ,NA, , , , ,NA,8,NA,1.7976931348623157e+308,65973.97970986366
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12),collapse(2),static,2,32,22.001822,66856.10759735107
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12), ,dynamic,NA,72,18.675977,67524.06254982948
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,2,32,32.518221,68379.63816571236
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12), ,dynamic,NA,128,18.85539166,69093.63938355446
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12),collapse(2),NA,NA,32,36.92071433,69915.63865685463
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,8,32,31.81914066,70697.6378736496
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)",num_threads(#P12),collapse(2),static,8,32,35.59418133,71535.63865756989
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12), ,NA,NA,72,19.07108666,72199.63660883904
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10),num_threads(#P12), ,dynamic,NA,16,60.283062,73283.6382021904
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , , ,collapse(2),NA,NA,NA,20.89518833,74053.63678836823
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,schedule(#P10),num_threads(#P12),collapse(2),dynamic,NA,72,104.28459833,75577.63802456856
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)", ,"dist_schedule(static, #P11)", ,NA,NA,NA,NA,NA,NA,1,NA,1.7976931348623157e+308,76809.64022660255
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12), ,NA,NA,128,20.62426133,77467.6379544735
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)", , ,thread_limit(#P14),64,NA,NA,NA,NA,NA,NA,NA,1.7976931348623157e+308,78690.10979294777
+"#pragma omp target teams distribute #P3 #P5 #P9 is_device_ptr(x1, x2, y_1, y_2, A)",parallel for #P4 #P8 #P6 #P7, , ,NA, , ,num_threads(#P12), ,NA,NA,128,1.7976931348623157e+308,79936.1084022522
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", ,collapse(2),dynamic,8,NA,21.91393566,80653.63753128052
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", ,collapse(2),dynamic,4,NA,24.352925,81443.63659882545
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)",num_threads(#P12),collapse(2),dynamic,1,72,102.822499,82947.6388874054
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)", , ,dynamic,1,NA,18.42640033,83605.63867712021
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,schedule(#P10), ,collapse(2),dynamic,NA,NA,57.303752,84657.89545083046
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12), ,NA,NA,64,18.130255,85349.63770699501
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12), ,NA,NA,8,87.13319966,86718.5315630436
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12),collapse(2),NA,NA,128,21.55897366,87386.36045646667
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12),collapse(2),NA,NA,176,22.24530833,88096.3614165783
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12), ,NA,NA,8,87.131515,89474.74360013008
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12), ,NA,NA,72,19.07420566,90158.36048388481
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd, ,num_threads(#P12),collapse(2),NA,NA,128,21.60123133,90834.87124276161
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)",num_threads(#P12), ,dynamic,8,72,18.15271166,91490.65739417076
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12),collapse(2),NA,NA,64,21.338766,92210.36064600945
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, , ,num_threads(#P12), ,NA,NA,128,20.79197,92894.3611433506
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA, ,"schedule(#P10, #P11)", , ,dynamic,16,NA,18.30825933,93552.61800980568
+#pragma omp #P3,parallel for #P4 #P8 #P6 #P7,NA,NA,NA,simd,"schedule(#P10, #P11)", , ,static,1,NA,11.85621166,94146.36142015457
