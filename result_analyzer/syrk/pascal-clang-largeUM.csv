@@ -1,0 +1,102 @@
+directive,objective,elapsed_sec
+"#pragma omp parallel for collapse(2) schedule(dynamic, 16) num_threads(72)",0.18897466,1693.4746465682983
+"#pragma omp parallel for simd collapse(2) schedule(dynamic, 16) num_threads(72)",0.18924233,4338.9043345451355
+"#pragma omp parallel for collapse(2) schedule(dynamic, 8) num_threads(72)",0.18983033,760.2859561443329
+"#pragma omp parallel for collapse(2) schedule(dynamic, 16)",0.19022633,6845.371685266495
+#pragma omp parallel for schedule(static) num_threads(72),0.190404,3125.287779569626
+"#pragma omp parallel for simd collapse(2) schedule(dynamic, 4) num_threads(72)",0.19059366,3998.9053387641907
+"#pragma omp parallel for simd collapse(2) schedule(dynamic, 8) num_threads(72)",0.19066133,3040.90390253067
+#pragma omp parallel for schedule(dynamic) num_threads(72),0.190723,1637.331067085266
+#pragma omp parallel for simd collapse(2) schedule(static) num_threads(72),0.19080766,3156.9041047096252
+#pragma omp parallel for simd collapse(2) num_threads(72),0.19085066,3011.329277276993
+"#pragma omp parallel for collapse(2) schedule(dynamic, 8)",0.190895,6788.989843130112
+"#pragma omp parallel for schedule(dynamic, 4) num_threads(72)",0.190987,2356.904120206833
+#pragma omp parallel for simd schedule(static) num_threads(72),0.191076,3674.9043760299683
+"#pragma omp parallel for collapse(2) schedule(dynamic, 4)",0.19173366,6740.904527425766
+"#pragma omp parallel for schedule(static, 2) num_threads(72)",0.191892,3323.0750710964203
+#pragma omp parallel for collapse(2) schedule(static) num_threads(72),0.19193666,1733.3459684848785
+"#pragma omp parallel for simd schedule(dynamic, 1) num_threads(72)",0.192008,2917.0313510894775
+"#pragma omp parallel for simd schedule(static, 2) num_threads(72)",0.19202366,3220.904674053192
+"#pragma omp parallel for schedule(static, 1) num_threads(72)",0.19206,2982.9040768146515
+#pragma omp parallel for simd schedule(dynamic),0.19218666,6108.90501332283
+"#pragma omp parallel for schedule(dynamic, 2) num_threads(72)",0.19241966,2956.903277158737
+"#pragma omp parallel for collapse(2) schedule(dynamic, 2) num_threads(72)",0.192438,2316.9036688804626
+#pragma omp parallel for collapse(2) num_threads(72),0.19257266,2838.9050056934357
+"#pragma omp parallel for simd collapse(2) schedule(dynamic, 2) num_threads(72)",0.19286066,2288.904937982559
+#pragma omp parallel for num_threads(72),0.193376,2784.904114961624
+"#pragma omp parallel for schedule(dynamic, 2)",0.19369266,6078.904743432999
+"#pragma omp parallel for collapse(2) schedule(static, 16) num_threads(72)",0.19399333,2654.90448141098
+"#pragma omp parallel for collapse(2) schedule(dynamic, 4) num_threads(72)",0.194282,2038.9042010307312
+"#pragma omp parallel for schedule(dynamic, 4)",0.194371,6312.904474973679
+"#pragma omp parallel for simd collapse(2) schedule(dynamic, 2)",0.19450366,6016.904158115387
+#pragma omp parallel for simd schedule(dynamic) num_threads(72),0.19490333,1949.3120243549347
+"#pragma omp parallel for collapse(2) schedule(static, 8) num_threads(72)",0.19502833,4122.90313744545
+"#pragma omp parallel for simd schedule(dynamic, 2)",0.195275,5887.032673835754
+"#pragma omp parallel for collapse(2) schedule(static, 4) num_threads(72)",0.19530566,3382.904376268387
+"#pragma omp parallel for simd schedule(dynamic, 2) num_threads(72)",0.19548433,4252.90536236763
+"#pragma omp parallel for schedule(dynamic, 1) num_threads(72)",0.19575266,2109.118507862091
+"#pragma omp parallel for collapse(2) schedule(static, 2) num_threads(72)",0.19580166,3890.9047105312347
+"#pragma omp parallel for simd schedule(dynamic, 4)",0.196794,6270.90428519249
+#pragma omp parallel for simd num_threads(72),0.19692333,3080.9042179584503
+"#pragma omp parallel for simd schedule(dynamic, 4) num_threads(72)",0.19710733,5380.908447265625
+"#pragma omp parallel for simd collapse(2) schedule(dynamic, 4)",0.19723,6684.904751062393
+#pragma omp parallel for schedule(dynamic),0.19747533,6218.903968334198
+#pragma omp parallel for collapse(2) schedule(dynamic),0.19747766,1530.3111364841461
+#pragma omp parallel for simd collapse(2) schedule(dynamic) num_threads(72),0.19774333,1789.8798179626465
+#pragma omp parallel for collapse(2) schedule(dynamic) num_threads(72),0.19781933,1567.4847371578217
+"#pragma omp parallel for schedule(dynamic, 1)",0.19803133,6394.903990983963
+#pragma omp parallel for simd collapse(2) schedule(dynamic),0.19859566,6964.9056668281555
+"#pragma omp parallel for simd collapse(2) schedule(static, 8) num_threads(72)",0.198818,4282.903524398804
+"#pragma omp parallel for simd schedule(static, 4) num_threads(72)",0.199156,5477.158951759338
+"#pragma omp parallel for simd schedule(static, 1) num_threads(72)",0.199858,5528.90406703949
+"#pragma omp parallel for simd collapse(2) schedule(static, 16) num_threads(72)",0.19988066,5204.904887914658
+"#pragma omp parallel for simd collapse(2) schedule(static, 1) num_threads(72)",0.20029466,3731.374732017517
+"#pragma omp parallel for collapse(2) schedule(dynamic, 1) num_threads(72)",0.20060233,2996.9042456150055
+"#pragma omp parallel for simd collapse(2) schedule(static, 2) num_threads(72)",0.20067266,5454.903754711151
+"#pragma omp parallel for simd collapse(2) schedule(dynamic, 1) num_threads(72)",0.200977,2193.117745399475
+"#pragma omp parallel for collapse(2) schedule(static, 1) num_threads(72)",0.20190366,2878.9029400348663
+baseline,0.20830166,1
+"#pragma omp parallel for simd schedule(dynamic, 8) num_threads(72)",0.21705933,2708.903234243393
+"#pragma omp parallel for schedule(dynamic, 8) num_threads(72)",0.21712866,3763.032892227173
+"#pragma omp parallel for simd schedule(dynamic, 8)",0.217519,6164.904100418091
+"#pragma omp parallel for schedule(dynamic, 16) num_threads(72)",0.217583,4042.905135154724
+"#pragma omp parallel for simd schedule(static, 16) num_threads(72)",0.21788033,4080.9044604301453
+"#pragma omp parallel for schedule(static, 16) num_threads(72)",0.21795866,3566.904228925705
+"#pragma omp parallel for simd schedule(static, 8) num_threads(72)",0.21797233,3404.9048511981964
+"#pragma omp parallel for schedule(dynamic, 8)",0.218321,6364.90292263031
+"#pragma omp parallel for simd schedule(dynamic, 16) num_threads(72)",0.21843766,1845.361040353775
+"#pragma omp parallel for schedule(static, 8) num_threads(72)",0.21902433,3058.9042546749115
+"#pragma omp parallel for schedule(dynamic, 16)",0.219189,6286.903729915619
+"#pragma omp parallel for simd schedule(dynamic, 2) num_threads(64)",0.21998833,5774.904581308365
+"#pragma omp parallel for simd schedule(static, 2) num_threads(64)",0.224045,5662.990046739578
+#pragma omp parallel for schedule(dynamic) num_threads(128),0.22658866,6652.904130458832
+#pragma omp parallel for simd schedule(dynamic) num_threads(128),0.22731933,6480.9038326740265
+"#pragma omp parallel for simd schedule(dynamic, 2) num_threads(128)",0.23654066,5811.159738302231
+"#pragma omp parallel for schedule(dynamic, 2) num_threads(128)",0.240638,5852.905668258667
+"#pragma omp parallel for schedule(dynamic, 8) num_threads(128)",0.26411566,6608.90533041954
+"#pragma omp parallel for simd schedule(static, 2) num_threads(128)",0.268651,4979.03178024292
+"#pragma omp parallel for simd schedule(dynamic, 8) num_threads(128)",0.273491,6554.90465593338
+#pragma omp parallel for simd schedule(static) num_threads(128),0.27689,5102.904315710068
+"#pragma omp parallel for simd schedule(dynamic, 2) num_threads(176)",0.280499,5943.372905492783
+"#pragma omp parallel for simd schedule(static, 2) num_threads(176)",0.309786,5138.904993057251
+"#pragma omp parallel for simd schedule(dynamic, 2) num_threads(32)",0.331555,5717.413883447647
+"#pragma omp parallel for simd schedule(static, 8) num_threads(176)",0.37462,5435.330059289932
+"#pragma omp parallel for simd schedule(static, 2) num_threads(32)",0.398572,4784.904693365097
+"#pragma omp parallel for simd schedule(static, 2) num_threads(16)",0.67002566,4939.413954257965
+"#pragma omp parallel for schedule(static, 2) num_threads(16)",0.69708766,5271.329030513763
+"#pragma omp target teams distribute parallel for collapse(2) schedule(static) dist_schedule(static, 16) thread_limit(128) is_device_ptr(A, C)",0.75577133,1242.2864663600922
+"#pragma omp target teams distribute parallel for simd num_threads(72) thread_limit(32) is_device_ptr(A, C)",1.151732,4368.904178380966
+#pragma omp parallel for simd schedule(static) num_threads(8),1.18692566,5576.903892755508
+"#pragma omp parallel for simd collapse(2) schedule(static, 1) num_threads(8)",1.188441,5042.90399813652
+"#pragma omp target teams distribute parallel for simd num_threads(72) is_device_ptr(A, C)",1.23719533,584.2863028049469
+"#pragma omp target teams distribute parallel for simd schedule(static, 1) num_threads(72) thread_limit(128) is_device_ptr(A, C)",1.24207366,2760.902957677841
+"#pragma omp target teams distribute parallel for collapse(2) schedule(static) num_threads(72) thread_limit(128) is_device_ptr(A, C)",1.24581866,1919.3120727539062
+"#pragma omp parallel for collapse(2) schedule(dynamic, 2) num_threads(16)",1.7976931348623157e+308,1544.8053495883942
+"#pragma omp target teams distribute parallel for collapse(2) schedule(dynamic) is_device_ptr(A, C)",1.7976931348623157e+308,1532.5594465732574
+"#pragma omp target teams distribute parallel for schedule(static, 16) num_threads(72) thread_limit(32) is_device_ptr(A, C)",10.46295166,4544.904238462448
+"#pragma omp target teams distribute parallel for simd collapse(2) schedule(dynamic, 16) num_threads(72) dist_schedule(static, 16) is_device_ptr(A, C)",2.18014333,3826.903615951538
+"#pragma omp target teams distribute is_device_ptr(A, C)",3.99682066,1082.2863509654999
+"#pragma omp target teams distribute parallel for schedule(dynamic, 2) num_threads(72) dist_schedule(static, 2) thread_limit(128) is_device_ptr(A, C)",47.14305766,2626.904546022415
+,7.48408166,468.2874894142151
+#pragma omp simd,7.662348,338.28734278678894
+"#pragma omp target teams distribute parallel for simd collapse(2) schedule(dynamic) num_threads(72) is_device_ptr(A, C)",8.642314,4212.904651403427
