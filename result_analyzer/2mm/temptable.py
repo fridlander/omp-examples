@@ -11,8 +11,7 @@ import numpy as np
 
 def fun(read):
     cwd = os.getcwd()
-    name = os.path.basename(cwd)
-    #name = cwd.split("/")[5]
+    name = cwd.split("/")[5]
     file = pd.read_csv(read)
     baseline = file.loc[file['directive'] == 'baseline']['objective'].values
     filetype = title=read.replace('.csv', '') # that will make lassen-clang-largeUM.csv to lassen-clang-largeUM
@@ -23,12 +22,34 @@ def fun(read):
     if count_failed > 0:
         txt = f"""\n \nThe number of failed runs was: {count_failed}"""
 
+    l = ['/num', 'limit/']
+    regstr = ''.join(l)
+    print(regstr)
     #need to add a color column, where baseline is red, target teams is blue, parallel for is green.
-    file['colour'] = np.full(shape=len(file.index),fill_value='black')
-
+    file['colour'] = np.full(shape=len(file.index),fill_value='other')
+    """
     file.loc[file['directive'].str.contains("pragma omp parallel for",case=False ,na=False), 'colour'] = '#22FF00'
-    file.loc[file['directive'].str.contains("target teams distribute",case=False ,na=False), 'colour'] = '#3DC6FF'
+    file.loc[file['directive'].str.contains("target teams distribute",case=False ,na=False), 'colour'] = '#F0740D'
+    file.loc[file['directive'].str.contains("target teams distribute parallel for",case=False ,na=False), 'colour'] = '#3DC6FF'
+    file.loc[file['directive'].str.contains("target teams distribute parallel for simd",case=False ,na=False), 'colour'] = '#CD00E0'    
     file.loc[file['directive'].str.contains("baseline",case=False ,na=False), 'colour'] = '#E63226'
+    """
+    file.loc[file['directive'].str.contains("pragma omp parallel for",case=False ,na=False), 'colour'] = 'parallel for'
+    file.loc[file['directive'].str.contains("target teams distribute",case=False ,na=False), 'colour'] = 'target'
+    file.loc[file['directive'].str.contains("target teams distribute parallel for",case=False ,na=False), 'colour'] = 'target parallel'
+    file.loc[file['directive'].str.contains("target teams distribute parallel for simd",case=False ,na=False), 'colour'] = 'target parallel simd'    
+    file.loc[file['directive'].str.contains("baseline",case=False ,na=False), 'colour'] = 'baseline'
+    bool = file['directive'].str.contains("target teams distribute parallel for",case=False ,na=False).any() and file['directive'].str.contains("num_threads" ,case=False ,na=False).any() and file['directive'].str.contains("thread_limit" ,case=False ,na=False).any()
+    print(bool)
+    if bool:
+        file.loc[file['directive'].str.contains("0*[5-9]\d",case=False ,na=False), 'colour'] = 'num_threads and limit'
+        
+    #file.loc[file['directive'].str.contains("num_threads(16)",case=False ,na=False), 'colour'] = 'num_threads(16)'
+    #file.loc[file['directive'].str.contains("num_threads(128)",case=False ,na=False), 'colour'] = 'num_threads(128)'
+    
+    
+#distribute parallel for simd schedule(dynamic)     
+    
     
     file['directive'] = file['directive'].astype(str)
     #df[df.columns[0]].count()
@@ -47,14 +68,22 @@ def fun(read):
                                 theme(legend_title = element_blank()) + \
                                 geom_hline(aes(yintercept= float(baseline)), color = '#E63226')
 
-    #(range(file.shape[0]))
-    
     #We have other, parallel for, target teams and baseline
     print("black count: " + str(len(file[file['colour'].str.contains('black')])))
     print("target count: " + str(len(file[file['colour'].str.contains('#3DC6FF')])))
     
-    if len(file[file['colour'].str.contains('black')]) > 0 and len(file[file['colour'].str.contains('#3DC6FF')]) > 0:
-        plot1 = plot1 + scale_color_manual(values =('#22FF00','#3DC6FF','#E63226','black') ,labels=("Parallel For","Target Teams","Baseline", "Other"))
+    targetparallel = len(file[file['colour'].str.contains('#3DC6FF')])
+    target = len(file[file['colour'].str.contains('#F0740D')])
+    targetparsimd = len(file[file['colour'].str.contains('#CD00E0')])
+    other = len(file[file['colour'].str.contains('black')])
+    """
+    if other > 0 and targetparallel > 0 and target > 0 and targetparsimd > 0:
+        plot1 = plot1 + scale_color_manual(values =('#22FF00','#3DC6FF', '#F0740D', '#CD00E0','#E63226','black') ,labels=("Parallel For","Target Parallel", "Target",'Target Simd',"Baseline", "Other"))
+
+    
+    
+    #if len(file[file['colour'].str.contains('black')]) > 0 and len(file[file['colour'].str.contains('#3DC6FF')]) > 0:
+    #    plot1 = plot1 + scale_color_manual(values =('#22FF00','#3DC6FF','#E63226','black') ,labels=("Parallel For","Target Teams","Baseline", "Other"))
 
     # We have parallel for, target teams and baseline
     elif len(file[file['colour'].str.contains('#3DC6FF')]) > 0 and len(file[file['colour'].str.contains('black')]) == 0:
@@ -64,11 +93,11 @@ def fun(read):
     elif len(file[file['colour'].str.contains('#3DC6FF')]) == 0 and len(file[file['colour'].str.contains('black')]) == 0:
         plot1 = plot1 + scale_color_manual(values =('#22FF00','#E63226') ,labels=("Parallel For","Baseline"))
 
+    #We have parallel for, other and baseline
     elif len(file[file['colour'].str.contains('#3DC6FF')]) == 0 and len(file[file['colour'].str.contains('black')]) > 0:
         plot1 = plot1 + scale_color_manual(values =('#22FF00','#E63226','black') ,labels=("Parallel For","Baseline", "Other"))
-        
-    
-        
+    """ 
+    #    plot1 = plot1 + scale_colour_discrete()        
     ggsave(plot1, filetype+name+'.png')
     return 0    
 

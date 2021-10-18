@@ -13,7 +13,6 @@ directive,objective,elapsed_sec
 #pragma omp parallel for schedule(static),0.013544,2134.2443544864655
 "#pragma omp parallel for simd schedule(dynamic, 16)",0.013765,7684.243575334549
 #pragma omp parallel for collapse(2),0.01529,3024.2448167800903
-baseline,0.02396966,1
 #pragma omp parallel for simd collapse(2),0.016152,2572.2442915439606
 "#pragma omp parallel for schedule(static, 8)",0.016806,6814.243323564529
 "#pragma omp parallel for collapse(2) schedule(dynamic, 16)",0.017293,8116.244910478592
@@ -35,6 +34,7 @@ baseline,0.02396966,1
 #pragma omp parallel for simd schedule(dynamic) num_threads(176),0.02268633,8664.328715801239
 #pragma omp parallel for schedule(dynamic) num_threads(176),0.022734,5736.244721412659
 #pragma omp parallel for schedule(static) num_threads(176),0.02349966,2072.3290836811066
+baseline,0.02396966,1
 #pragma omp parallel for simd num_threads(176),0.02401666,6052.243998527527
 #pragma omp parallel for num_threads(176),0.02545566,5830.24330496788
 #pragma omp parallel for simd schedule(static) num_threads(176),0.02562133,9480.24422955513

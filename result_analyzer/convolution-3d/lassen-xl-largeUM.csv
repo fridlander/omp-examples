@@ -32,8 +32,8 @@ baseline,0.00603233,1
 "#pragma omp parallel for simd schedule(static, 4)",0.00633166,7146.245135784149
 #pragma omp parallel for simd collapse(3) schedule(static) num_threads(128),0.006359,1882.2457571029663
 #pragma omp parallel for collapse(2) schedule(static) num_threads(176),0.006439,6772.416997671127
-#pragma omp parallel for simd schedule(static) num_threads(72),0.00645733,3430.248888015747
 #pragma omp parallel for schedule(dynamic) num_threads(176),0.00645733,5466.244939804077
+#pragma omp parallel for simd schedule(static) num_threads(72),0.00645733,3430.248888015747
 #pragma omp parallel for simd collapse(2) schedule(static) num_threads(176),0.006508,6540.330572843552
 "#pragma omp parallel for schedule(static, 1) num_threads(128)",0.006521,2262.6711900234222
 #pragma omp parallel for collapse(2) num_threads(176),0.00653933,4002.2486085891724

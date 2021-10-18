@@ -11,7 +11,8 @@ import numpy as np
 
 def fun(read):
     cwd = os.getcwd()
-    name = cwd.split("/")[5]
+    name = os.path.basename(cwd)
+    #name = cwd.split("/")[5]
     file = pd.read_csv(read)
     baseline = file.loc[file['directive'] == 'baseline']['objective'].values
     filetype = title=read.replace('.csv', '') # that will make lassen-clang-largeUM.csv to lassen-clang-largeUM
